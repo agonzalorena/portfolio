@@ -3,8 +3,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --muted: rgba(0, 0, 0, 0.7);
+  --muted: #000000b3;
+  --lightbackground: rgba(0, 0, 0, 0.2);
   --primary: #3022ec;
+}
+:root.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+  --muted: #ffffffb3;
+  --lightbackground: rgba(255, 255, 255, 0.2);
+  --primary: #605efc;
 }
 
 @theme inline {
@@ -14,6 +22,7 @@
   --font-mono: var(--font-geist-mono);
   --color-muted: var(--muted);
   --color-primary: var(--primary);
+  --color-lightbackground: var(--lightbackground);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +30,13 @@
     --background: #ededed;
     --foreground: #0a0a0a;
   }
+}
+.shadow-custom {
+  box-shadow: 0 1px 1px 1px var(--muted);
+}
+
+.dark .shadow-custom {
+  box-shadow: 0 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 body {

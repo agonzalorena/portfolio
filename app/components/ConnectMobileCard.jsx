@@ -8,7 +8,7 @@ const ConnectMobileCard = ({ name, link, id }) => {
         title={`Connect on ${name}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="border border-black/60 w-full text-center text-lg py-4 rounded active:scale-95 hover:bg-black/5 transition"
+        className="border border-foreground/60 shadow-xs shadow-muted w-full text-center text-lg py-4 rounded active:scale-95 transition"
       >
         {name}
       </a>
@@ -19,7 +19,7 @@ const ConnectMobileCard = ({ name, link, id }) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="bg-black text-white text-lg border w-full text-center py-4 rounded active:scale-95 hover:bg-gray-900 transition"
+      className="bg-foreground text-background shadow-custom text-lg w-full text-center py-4 rounded active:scale-95 transition"
     >
       {name}
     </a>

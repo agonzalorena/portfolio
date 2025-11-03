@@ -12,7 +12,7 @@ import { Me, Pj } from "./utils/svgs.jsx";
 
 export default function Home() {
   return (
-    <main className="w-full  max-w-[1370px]  h-screen lg:pt-10 pt-32 px-4 lg:px-10 flex flex-col lg:flex-row justify-center gap-10">
+    <main className="w-full  max-w-[1370px]  h-screen lg:pt-5 pt-16 px-4 lg:px-10 flex flex-col lg:flex-row justify-center gap-10">
       <section className="lg:w-3/5 flex flex-col justify-center gap-14">
         <div className="flex flex-col justify-center text-left gap-2">
           <h1 className="text-5xl font-extrabold">Agustin Gonzalorena</h1>
@@ -22,9 +22,9 @@ export default function Home() {
           <p className="font-light">
             Backend Developer specialized in Java and{" "}
             <span className="text-primary">Spring Boot</span>, with experience
-            in frontend projects using React and Next.js. I’m currently focused
-            on strengthening my skills and professional growth in backend
-            development.
+            in frontend projects using React and Next.js. I’m continuously
+            learning and exploring new tools that complement my work as a
+            developer.
           </p>
         </div>
         <div className="hidden lg:flex gap-2 text-red-900">
@@ -35,7 +35,7 @@ export default function Home() {
       </section>
       <section className="lg:w-2/5 flex flex-col pt-4 justify-center gap-5">
         <div className="hidden lg:flex flex-col">
-          <div className="flex gap-1 items-center">
+          <div className="flex gap-0.5 items-center">
             <div className="w-3 ">
               <Pj />
             </div>
@@ -62,8 +62,8 @@ export default function Home() {
           </a>
         </div>
         <div className="text-left w-full hidden lg:block">
-          <div className="flex gap-1 items-center">
-            <div className="w-3 ">
+          <div className="flex gap-0.5 items-center">
+            <div className="w-3">
               <Me />
             </div>
             <h2 className="text-muted font-light">Connect</h2>
@@ -93,7 +93,7 @@ export default function Home() {
             title="View all projects"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full text-center py-3 text-muted active:scale-95 hover:underline hover:text-primary"
+            className="w-full text-center font-semibold py-3 text-muted active:scale-95 hover:underline hover:text-primary"
           >
             View all projects ➞
           </a>

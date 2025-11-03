@@ -7,7 +7,7 @@ const ProyectCard = ({ name, description, link }) => {
       title={`View project: ${name}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="max-w-4/5 border border-black/30 shadow-xs shadow-muted rounded p-2 flex justify-between hover:text-primary hover:border-primary hover:shadow hover:shadow-primary transition-colors"
+      className="max-w-4/5 border border-lightbackground shadow-xs shadow-muted rounded p-2 flex justify-between hover:text-primary hover:border-primary hover:shadow hover:shadow-primary transition-colors"
     >
       <div>
         <h3 className="font-semibold">{name}</h3>
