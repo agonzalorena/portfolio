@@ -33,7 +33,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="lg:w-2/5 flex flex-col pt-4 justify-center gap-5">
+      <section className="select-none lg:w-2/5 flex flex-col pt-4 justify-center gap-5">
         <div className="hidden lg:flex flex-col">
           <div className="flex gap-0.5 items-center">
             <div className="w-3 ">
@@ -56,7 +56,7 @@ export default function Home() {
             title="View all projects"
             target="_blank"
             rel="noopener noreferrer"
-            className="pt-3 text-sm font-semibold text-muted hover:underline hover:text-primary"
+            className="select-none pt-3 text-sm font-semibold text-muted hover:underline hover:text-primary"
           >
             View all projects ➞
           </a>
@@ -66,7 +66,7 @@ export default function Home() {
             <div className="w-3">
               <Me />
             </div>
-            <h2 className="text-muted font-light">Connect</h2>
+            <h2 className="select-none text-muted font-light">Connect</h2>
           </div>
           <div className="flex gap-4">
             {connectList.map((connect, index) => (

@@ -19,7 +19,7 @@ export default function ThemeToggle() {
   return (
     <div
       onClick={toggleTheme}
-      className="absolute right-6 md:right-20 top-5 p-1 border-foreground rounded-full flex items-center justify-center hover:cursor-pointer"
+      className="absolute right-6 md:right-20 top-5 select-none p-1 border-foreground rounded-full flex items-center justify-center hover:cursor-pointer hover:shadow-xs hover:shadow-foreground active:scale-95"
     >
       <div className="h-5 w-5">{isDarkMode ? <SunIcon /> : <MoonIcon />}</div>
     </div>
