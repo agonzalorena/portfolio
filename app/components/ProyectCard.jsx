@@ -10,8 +10,8 @@ const ProyectCard = ({ name, description, link }) => {
       className="max-w-4/5 border border-lightbackground shadow-xs shadow-muted rounded p-2 flex justify-between hover:text-primary hover:border-primary hover:shadow hover:shadow-primary transition-colors"
     >
       <div>
-        <h3 className="font-semibold">{name}</h3>
-        <p className="text-muted font-extralight">{description}</p>
+        <h3 className="">{name}</h3>
+        <p className="text-sm text-muted font-extralight">{description}</p>
       </div>
       <div className="flex items-center justify-end h-full">
         <p>➞</p>

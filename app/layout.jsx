@@ -12,7 +12,8 @@ export const metadata = {
   title: "Portfolio of Agustin Gonzalorena - Software Developer",
   description:
     "Portfolio of Agustin Gonzalorena. Software Developer and blockchain enthusiast. Specialized in creating custom web applications.",
-  keywords: "Agustin Gonzalorena, Software Developer, Gonzalorena",
+  keywords:
+    "Agustin Gonzalorena, Software Developer, Gonzalorena, Backend Developer, Java, Spring Boot, React, Next.js, Portfolio",
   publisher: "Agustin Gonzalorena",
   robots: "index, follow",
   googlebot: "index, follow",
@@ -46,6 +47,10 @@ const jsonLd = {
   url: "https://agonzalorena.com/",
   image: "https://agonzalorena.com/imagen_OpenGraph.png",
   jobTitle: "Software Developer",
+  sameAs: [
+    "https://github.com/Agustin-Gonzalorena",
+    "https://www.linkedin.com/in/agustin-gonzalorena/",
+  ],
 };
 
 export default function RootLayout({ children }) {
@@ -72,6 +77,7 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="ACJVrDkGDbhDblH4pJk0wo59CqRqUTIkKPaokRfJYFU"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${firaCode.className} antialiased flex justify-center`}>
         {children}

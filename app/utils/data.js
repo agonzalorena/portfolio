@@ -12,12 +12,12 @@ export const stackList = [
 export const projectList = [
   {
     name: "Ephemerides App",
-    description: "A web app that shows daily historical events.",
+    description: "DB:SQL, Back:Spring Boot, Front:Next",
     link: "https://github.com/Agustin-Gonzalorena/api-efemeride",
   },
   {
     name: "ShortURL Service",
-    description: "A URL shortening service.",
+    description: "DB:Firebase, Back:Next API, Front:Next",
     link: "https://github.com/Agustin-Gonzalorena/shorturl",
   },
 ];

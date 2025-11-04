@@ -4,7 +4,7 @@ import {
   connectList,
   proyectsUrl,
 } from "./utils/data.js";
-import StackBtn from "./components/StackBtn";
+import StackCard from "./components/StackCard.jsx";
 import ProyectCard from "./components/ProyectCard";
 import ConnectCard from "./components/ConnectCard";
 import ConnectMobileCard from "./components/ConnectMobileCard";
@@ -12,28 +12,28 @@ import { Me, Pj } from "./utils/svgs.jsx";
 
 export default function Home() {
   return (
-    <main className="w-full  max-w-[1370px]  h-screen lg:pt-5 pt-16 px-4 lg:px-10 flex flex-col lg:flex-row justify-center gap-10">
-      <section className="lg:w-3/5 flex flex-col justify-center gap-14">
-        <div className="flex flex-col justify-center text-left gap-2">
+    <main className="w-full  max-w-[1370px]  h-screen lg:pt-5 pt-16 px-4 lg:px-10 flex flex-col lg:flex-row justify-center lg:items-center gap-10">
+      <section className="lg:w-3/5 flex flex-col justify-center gap-11 lg:h-1/2">
+        <div className="flex flex-col justify-center text-left gap-3">
           <h1 className="text-5xl font-extrabold">Agustin Gonzalorena</h1>
           <p className="text-2xl text-muted">Software Developer</p>
         </div>
         <div className="hidden lg:flex">
           <p className="font-light">
             Backend Developer specialized in Java and{" "}
-            <span className="text-primary">Spring Boot</span>, with experience
-            in frontend projects using React and Next.js. I’m continuously
-            learning and exploring new tools that complement my work as a
-            developer.
+            <span className="text-primary font-semibold">Spring Boot</span>,
+            with experience in frontend projects using React and Next.js. I’m
+            continuously learning and exploring new tools that complement my
+            work as a developer.
           </p>
         </div>
-        <div className="hidden lg:flex gap-2 text-red-900">
+        <div className="hidden lg:flex gap-2">
           {stackList.map((tech) => (
-            <StackBtn key={tech} name={tech} />
+            <StackCard key={tech} name={tech} />
           ))}
         </div>
       </section>
-      <section className="select-none lg:w-2/5 flex flex-col pt-4 justify-center gap-5">
+      <section className="select-none lg:w-2/5 flex flex-col justify-center gap-10 pt-3 lg:h-1/2">
         <div className="hidden lg:flex flex-col">
           <div className="flex gap-0.5 items-center">
             <div className="w-3 ">
