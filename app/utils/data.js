@@ -26,12 +26,12 @@ export const connectList = [
   {
     id: 1,
     name: "GitHub",
-    link: "https://github.com/Agustin-Gonzalorena",
+    link: "https://github.com/agonzalorena",
   },
   {
     id: 2,
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/agustin-gonzalorena/",
+    link: "https://www.linkedin.com/in/agonzalorena/",
   },
   {
     id: 3,
@@ -40,5 +40,4 @@ export const connectList = [
   },
 ];
 
-export const proyectsUrl =
-  "https://github.com/Agustin-Gonzalorena?tab=repositories";
+export const proyectsUrl = "https://github.com/agonzalorena?tab=repositories";
