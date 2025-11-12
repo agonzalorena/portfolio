@@ -1,5 +1,6 @@
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./components/ThemeProvider";
 import ThemeToggle from "./components/ThemeToggle";
 
 const firaCode = Fira_Code({
@@ -55,7 +56,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
@@ -80,8 +81,10 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${firaCode.className} antialiased flex justify-center`}>
-        {children}
-        <ThemeToggle />
+        <Providers>
+          {children}
+          <ThemeToggle />
+        </Providers>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
