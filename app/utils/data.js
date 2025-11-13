@@ -40,4 +40,4 @@ export const connectList = [
   },
 ];
 
-export const proyectsUrl = "https://github.com/agonzalorena?tab=repositories";
+export const projectsUrl = "https://github.com/agonzalorena?tab=repositories";

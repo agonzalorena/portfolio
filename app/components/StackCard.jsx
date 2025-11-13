@@ -7,9 +7,8 @@ const StackCard = ({ name }) => {
   const handleEnter = () => {
     gsap.killTweensOf(cardRef.current); // Detiene cualquier animación en curso
     gsap.to(cardRef.current, {
-      y: -10, // cuánto "salta"
-      scale: 1.05,
-      duration: 0.6,
+      y: -5, // cuánto "salta"
+      duration: 0.2,
       ease: "power2.out",
     });
   };
@@ -18,8 +17,7 @@ const StackCard = ({ name }) => {
     gsap.killTweensOf(cardRef.current); // Detiene cualquier animación en curso
     gsap.to(cardRef.current, {
       y: 0,
-      scale: 1,
-      duration: 0.5,
+      duration: 0.2,
     });
   };
 

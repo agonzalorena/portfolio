@@ -16,7 +16,7 @@ const Hero = () => {
       gsap.set(container.current, { visibility: "visible" });
       const mm = gsap.matchMedia();
       const tl = gsap.timeline({
-        defaults: { ease: "power1.out", duration: 0.8 },
+        defaults: { ease: "power1.out", duration: 0.5 },
       });
       mm.add(
         {
@@ -27,8 +27,8 @@ const Hero = () => {
           let { isDesktop, isMobile } = context.conditions;
           if (isDesktop) {
             tl.from("#title", { y: -20, autoAlpha: 0, immediateRender: true })
-              .from("#subtitle", { x: -30, autoAlpha: 0 }, "-=0.5")
-              .from("#description", { x: -50, autoAlpha: 0 }, "-=0.4");
+              .from("#subtitle", { x: -30, autoAlpha: 0 }, "-=0.0.5")
+              .from("#description", { x: -50, autoAlpha: 0 }, "-=0.0.5");
           }
           if (isMobile) {
             gsap.from("#title", {
@@ -42,7 +42,7 @@ const Hero = () => {
               autoAlpha: 0,
               duration: 0.4,
               ease: "none",
-              delay: 0.4,
+              delay: 0.2,
             });
           }
         }
@@ -56,10 +56,10 @@ const Hero = () => {
       gsap.from(stackContainer.current.children, {
         y: 20,
         autoAlpha: 0,
-        duration: 0.6,
-        ease: "elastic.out(1.5, 0.5)",
-        delay: 1.3,
-        stagger: 0.1,
+        duration: 0.5,
+        ease: "power3.out",
+        delay: 1.2,
+        stagger: 0.05,
       });
     },
     { scope: stackContainer }

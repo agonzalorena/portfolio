@@ -25,7 +25,7 @@ export default function ThemeToggle() {
       autoAlpha: 0,
       duration: 0.4,
       ease: "power3.out",
-      delay: 3,
+      delay: 1.3,
     });
   }, [mounted]);
 

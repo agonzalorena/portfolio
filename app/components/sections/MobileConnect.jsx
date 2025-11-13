@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import ConnectMobileCard from "../ConnectMobileCard";
-import { connectList, proyectsUrl } from "../../utils/data.js";
+import { connectList, projectsUrl } from "../../utils/data.js";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -41,7 +41,7 @@ const MobileConnect = () => {
         />
       ))}
       <a
-        href={proyectsUrl}
+        href={projectsUrl}
         title="View all projects"
         target="_blank"
         rel="noopener noreferrer"

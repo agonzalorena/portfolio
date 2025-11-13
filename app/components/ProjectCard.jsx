@@ -1,13 +1,13 @@
 import { useRef } from "react";
 import gsap from "gsap";
 
-const ConnectCard = ({ name, link }) => {
+const ProjectCard = ({ name, description, link, className }) => {
   const cardRef = useRef();
 
   const handleEnter = () => {
     gsap.killTweensOf(cardRef.current); // Detiene cualquier animación en curso
     gsap.to(cardRef.current, {
-      scale: 1.05,
+      x: 5,
       duration: 0.2,
       ease: "power2.out",
     });
@@ -16,7 +16,7 @@ const ConnectCard = ({ name, link }) => {
   const handleLeave = () => {
     gsap.killTweensOf(cardRef.current); // Detiene cualquier animación en curso
     gsap.to(cardRef.current, {
-      scale: 1,
+      x: 0,
       duration: 0.2,
     });
   };
@@ -26,14 +26,20 @@ const ConnectCard = ({ name, link }) => {
       ref={cardRef}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
-      title={`Connect on ${name}`}
+      title={`View project: ${name}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-md font-semibold hover:underline hover:text-primary"
+      className={`${className} max-w-4/5 border border-lightbackground shadow-xs shadow-muted rounded p-2 flex justify-between hover:text-primary hover:border-primary hover:shadow hover:shadow-primary transition-colors`}
     >
-      {name}
+      <div>
+        <h3 className="">{name}</h3>
+        <p className="text-sm text-muted font-extralight">{description}</p>
+      </div>
+      <div className="flex items-center justify-end h-full">
+        <p>➞</p>
+      </div>
     </a>
   );
 };
 
-export default ConnectCard;
+export default ProjectCard;

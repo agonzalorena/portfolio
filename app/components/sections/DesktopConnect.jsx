@@ -13,9 +13,9 @@ const DesktopConnect = () => {
     gsap.from("#connectTitle", {
       y: 20,
       autoAlpha: 0,
-      duration: 0.6,
+      duration: 0.4,
       ease: "power3.out",
-      delay: 1.8,
+      delay: 2,
     });
   });
   useGSAP(
@@ -26,8 +26,8 @@ const DesktopConnect = () => {
         autoAlpha: 0,
         duration: 0.5,
         ease: "power3.out",
-        delay: 2,
-        stagger: 0.3,
+        delay: 2.1,
+        stagger: 0.2,
       });
     },
     { scope: connectDesktop }
