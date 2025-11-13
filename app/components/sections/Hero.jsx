@@ -26,23 +26,21 @@ const Hero = () => {
         (context) => {
           let { isDesktop, isMobile } = context.conditions;
           if (isDesktop) {
-            tl.from("#title", { y: -20, autoAlpha: 0, immediateRender: true })
-              .from("#subtitle", { x: -30, autoAlpha: 0 }, "-=0.0.5")
+            tl.from("#titlee", { y: -20, autoAlpha: 0, immediateRender: true })
+              .from("#subtitle", { x: -30, autoAlpha: 0 }, "")
               .from("#description", { x: -50, autoAlpha: 0 }, "-=0.0.5");
           }
           if (isMobile) {
-            gsap.from("#title", {
-              y: -20,
+            gsap.from("#titlee", {
               autoAlpha: 0,
-              duration: 0.4,
-              ease: "none",
+              duration: 0.1,
+              ease: "power3.out",
             });
             gsap.from("#subtitle", {
-              x: -30,
+              x: -100,
               autoAlpha: 0,
-              duration: 0.4,
-              ease: "none",
-              delay: 0.2,
+              duration: 0.5,
+              ease: "power3.out",
             });
           }
         }
@@ -71,7 +69,11 @@ const Hero = () => {
       style={{ visibility: "hidden" }}
     >
       <div className="flex flex-col justify-center text-left gap-3">
-        <h1 className="text-5xl font-extrabold" id="title">
+        <h1
+          className="text-5xl font-extrabold"
+          id="title"
+          style={{ visibility: "visible" }}
+        >
           Agustin Gonzalorena
         </h1>
         <p className="text-2xl text-muted" id="subtitle">

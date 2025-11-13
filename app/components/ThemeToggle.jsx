@@ -21,16 +21,14 @@ export default function ThemeToggle() {
     if (!btn) return;
 
     gsap.from(btn, {
-      y: 20,
       autoAlpha: 0,
-      duration: 0.4,
+      duration: 0.2,
       ease: "power3.out",
-      delay: 1.3,
+      delay: 0.1,
     });
   }, [mounted]);
 
   if (!mounted) return null; // evita render antes de hidratar
-
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   const toggleTheme = () => {

@@ -16,10 +16,10 @@ const MobileConnect = () => {
         {
           x: 0,
           autoAlpha: 1,
-          duration: 0.6,
+          duration: 0.5,
           ease: "power3.out",
-          delay: 0.6,
-          stagger: 0.4,
+          delay: 0.1,
+          stagger: 0.1,
         }
       );
     },
