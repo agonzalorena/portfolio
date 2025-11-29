@@ -9,15 +9,31 @@ const firaCode = Fira_Code({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+// 1. Mover la configuración del viewport a su propia exportación (Next.js 14+)
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff", // Puedes ajustar el color si tenías uno
+};
+
 export const metadata = {
   title: "Portfolio of Agustin Gonzalorena - Software Developer",
   description:
-    "Portfolio of Agustin Gonzalorena. Software Developer and blockchain enthusiast. Specialized in creating custom web applications.",
+    "Portfolio of Agustin Gonzalorena. Software Developer and enthusiast of all things servers and deployments. Specialized in creating custom web applications.",
   keywords:
     "Agustin Gonzalorena, Software Developer, Gonzalorena, Backend Developer, Java, Spring Boot, React, Next.js, Portfolio",
   publisher: "Agustin Gonzalorena",
-  robots: "index, follow",
-  googlebot: "index, follow",
+
+  // 2. Corregir la estructura de robots
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+
   authors: [
     {
       name: "Agustin Gonzalorena",
@@ -31,7 +47,7 @@ export const metadata = {
     title: "Agustin Gonzalorena",
     siteName: "Agustin Gonzalorena",
     description:
-      "Portfolio of Agustin Gonzalorena. Software developer and blockchain enthusiast.",
+      "Portfolio of Agustin Gonzalorena. Software developer and enthusiast of all things servers and deployments.",
     url: "https://agonzalorena.com/",
     images: {
       url: "https://agonzalorena.com/imagen_OpenGraph.png",
@@ -40,7 +56,34 @@ export const metadata = {
     },
     type: "website",
   },
+
+  // 3. Mover la verificación de Google aquí
+  verification: {
+    google: "ACJVrDkGDbhDblH4pJk0wo59CqRqUTIkKPaokRfJYFU",
+  },
+
+  // 4. Mover los íconos aquí
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      {
+        url: "/my-favicon/favicon-96x96.png",
+        type: "image/png",
+        sizes: "96x96",
+      },
+      { url: "/my-favicon/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/my-favicon/apple-touch-icon.png", sizes: "180x180" }],
+  },
+
+  // 5. Mover el manifest y configuraciones de Apple app
+  manifest: "/my-favicon/site.webmanifest",
+  appleWebApp: {
+    title: "Agustin",
+  },
 };
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -57,29 +100,7 @@ const jsonLd = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link
-          rel="icon"
-          type="image/png"
-          href="/my-favicon/favicon-96x96.png"
-          sizes="96x96"
-        />
-        <link rel="icon" type="image/svg+xml" href="/my-favicon/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/my-favicon/apple-touch-icon.png"
-        />
-        <meta name="apple-mobile-web-app-title" content="Agustin" />
-        <link rel="manifest" href="/my-favicon/site.webmanifest" />
-        <meta
-          name="google-site-verification"
-          content="ACJVrDkGDbhDblH4pJk0wo59CqRqUTIkKPaokRfJYFU"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
+      {/* ELIMINADA la etiqueta <head> manual para que funcione metadata */}
       <body className={`${firaCode.className} antialiased flex justify-center`}>
         <Providers>
           {children}
