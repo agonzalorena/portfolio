@@ -11,14 +11,14 @@ export const stackList = [
 
 export const projectList = [
   {
-    name: "Ephemerides App",
-    description: "DB:SQL, Back:Spring Boot, Front:Next",
-    link: "https://github.com/Agustin-Gonzalorena/api-efemeride",
+    name: "Padel Score App",
+    description: "Spring Boot, Microservices, Next, PostgreSQL",
+    link: "https://github.com/agonzalorena/padel-global-score ",
   },
   {
-    name: "ShortURL Service",
-    description: "DB:Firebase, Back:Next API, Front:Next",
-    link: "https://github.com/Agustin-Gonzalorena/shorturl",
+    name: "Ephemerides App",
+    description: "Spring Boot, PostgreSQL, Next, Gemini IA",
+    link: "https://github.com/Agustin-Gonzalorena/api-efemeride",
   },
 ];
 
