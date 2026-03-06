@@ -9,6 +9,7 @@ const DesktopConnect = () => {
   const connectDesktop = React.useRef();
   const connectItemContainer = React.useRef();
   useGSAP(() => {
+    connectDesktop.current.style.pointerEvents = "none";
     gsap.set(connectDesktop.current, { visibility: "visible" });
     gsap.from("#connectTitle", {
       y: 20,
@@ -16,10 +17,16 @@ const DesktopConnect = () => {
       duration: 0.4,
       ease: "power3.out",
       delay: 2,
+      onComplete: () => {
+        if (connectDesktop.current) {
+          connectDesktop.current.style.pointerEvents = "auto";
+        }
+      },
     });
   });
   useGSAP(
     () => {
+      connectItemContainer.current.style.pointerEvents = "none";
       gsap.set(connectItemContainer.current, { visibility: "visible" });
       gsap.from(connectItemContainer.current.children, {
         y: 20,
@@ -28,9 +35,14 @@ const DesktopConnect = () => {
         ease: "power3.out",
         delay: 2.1,
         stagger: 0.2,
+        onComplete: () => {
+          if (connectItemContainer.current) {
+            connectItemContainer.current.style.pointerEvents = "auto";
+          }
+        },
       });
     },
-    { scope: connectDesktop }
+    { scope: connectDesktop },
   );
 
   return (

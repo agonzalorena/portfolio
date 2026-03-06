@@ -9,6 +9,7 @@ const Projects = () => {
   const projectsContainer = useRef(null);
   useGSAP(
     () => {
+      projectsContainer.current.style.pointerEvents = "none";
       gsap.set(projectsContainer.current, {
         visibility: "visible",
       });
@@ -19,9 +20,14 @@ const Projects = () => {
         ease: "power3.out",
         stagger: 0.2,
         delay: 1.5,
+        onComplete: () => {
+          if (projectsContainer.current) {
+            projectsContainer.current.style.pointerEvents = "auto";
+          }
+        },
       });
     },
-    { scope: projectsContainer }
+    { scope: projectsContainer },
   );
   const cardRef = useRef();
   const handleEnter = () => {

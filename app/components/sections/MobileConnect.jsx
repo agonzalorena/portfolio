@@ -9,6 +9,7 @@ const MobileConnect = () => {
   const connectMobile = React.useRef();
   useGSAP(
     () => {
+      connectMobile.current.style.pointerEvents = "none";
       gsap.set(connectMobile.current, { visibility: "visible" });
       gsap.fromTo(
         ".connect-item",
@@ -20,10 +21,15 @@ const MobileConnect = () => {
           ease: "power3.out",
           delay: 0.1,
           stagger: 0.1,
-        }
+          onComplete: () => {
+            if (connectMobile.current) {
+              connectMobile.current.style.pointerEvents = "auto";
+            }
+          },
+        },
       );
     },
-    { scope: connectMobile }
+    { scope: connectMobile },
   );
   return (
     <div

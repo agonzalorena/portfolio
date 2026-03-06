@@ -43,14 +43,15 @@ const Hero = () => {
               ease: "power3.out",
             });
           }
-        }
+        },
       );
       return () => mm.revert(); // cleanup animations
     },
-    { scope: container }
+    { scope: container },
   );
   useGSAP(
     () => {
+      stackContainer.current.style.pointerEvents = "none";
       gsap.from(stackContainer.current.children, {
         y: 20,
         autoAlpha: 0,
@@ -58,9 +59,14 @@ const Hero = () => {
         ease: "power3.out",
         delay: 1.2,
         stagger: 0.05,
+        onComplete: () => {
+          if (stackContainer.current) {
+            stackContainer.current.style.pointerEvents = "auto";
+          }
+        },
       });
     },
-    { scope: stackContainer }
+    { scope: stackContainer },
   );
   return (
     <section
