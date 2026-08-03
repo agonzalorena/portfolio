@@ -18,7 +18,7 @@ export const projectList = [
   {
     name: "Ephemerides App",
     description: "Spring Boot, PostgreSQL, Next, Gemini IA",
-    link: "https://github.com/Agustin-Gonzalorena/api-efemeride",
+    link: "https://github.com/agonzalorena/api-efemeride",
   },
 ];
 

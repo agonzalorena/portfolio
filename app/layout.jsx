@@ -23,6 +23,7 @@ export const metadata = {
   keywords:
     "Agustin Gonzalorena, Software Developer, Gonzalorena, Backend Developer, Java, Spring Boot, React, Next.js, Portfolio",
   publisher: "Agustin Gonzalorena",
+  metadataBase: new URL("https://agonzalorena.com/"),
 
   // 2. Corregir la estructura de robots
   robots: {
@@ -37,7 +38,7 @@ export const metadata = {
   authors: [
     {
       name: "Agustin Gonzalorena",
-      url: "https://github.com/Agustin-Gonzalorena",
+      url: "https://github.com/agonzalorena",
     },
   ],
   alternates: {
@@ -91,9 +92,20 @@ const jsonLd = {
   url: "https://agonzalorena.com/",
   image: "https://agonzalorena.com/imagen_OpenGraph.png",
   jobTitle: "Software Developer",
+  description:
+    "Software Developer especializado en Java, Spring Boot y arquitecturas de microservicios.",
+  knowsAbout: [
+    "Java",
+    "Spring Boot",
+    "React",
+    "Next.js",
+    "Kafka",
+    "Docker",
+    "PostgreSQL",
+  ],
   sameAs: [
-    "https://github.com/Agustin-Gonzalorena",
-    "https://www.linkedin.com/in/agustin-gonzalorena/",
+    "https://github.com/agonzalorena",
+    "https://www.linkedin.com/in/agonzalorena/",
   ],
 };
 
