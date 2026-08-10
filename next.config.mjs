@@ -3,7 +3,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/cv.pdf",
+        source: "/CV.pdf",
         headers: [
           {
             key: "Cache-Control",

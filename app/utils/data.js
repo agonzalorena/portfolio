@@ -36,7 +36,7 @@ export const connectList = [
   {
     id: 3,
     name: "View CV",
-    link: "/cv.pdf",
+    link: "/CV.pdf",
   },
 ];
 

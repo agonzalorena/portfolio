@@ -1,6 +1,6 @@
 # Agustin Gonzalorena
 
-> Desarrollador Full Stack recientemente graduado (Argentina), enfocado en sistemas escalables y administración de infraestructura. Prioriza buenas prácticas por sobre un lenguaje específico, con experiencia práctica en arquitecturas basadas en eventos, microservicios y despliegues de servidores locales. Integra activamente herramientas de IA (Copilot, Claude, Gemini) en su flujo de trabajo diario.
+> Desarrollador orientado al Backend, con experiencia en desarrollo Full Stack (Argentina), enfocado en el diseño de sistemas escalables y la administración de infraestructura. Destaca por su rápida capacidad de adaptación, aprendizaje continuo y aplicación de buenas prácticas. Integra activamente herramientas de Inteligencia Artificial (Copilot, Claude, Gemini) para optimizar el desarrollo y la resolución de problemas, manteniendo un análisis crítico y criterio propio sobre sus resultados.
 
 ## Referencias
 - [Portfolio](https://agonzalorena.com)
@@ -18,8 +18,8 @@
 ## Stack técnico
 - Backend: Java, Spring Boot, APIs RESTful, PostgreSQL
 - Frontend: JavaScript, React, Next.js
-- Infraestructura: Linux, Docker, Nginx, Cloudflare (túneles y SSL/TLS), Bash Scripting
-- Arquitectura: Diseño de microservicios, arquitectura orientada a eventos, sistemas distribuidos
+- Infraestructura: Linux, Docker, Docker Compose, Nginx, Cloudflare (túneles y SSL/TLS), Bash Scripting
+- Arquitectura y Fundamentos: Diseño de microservicios, arquitectura orientada a eventos, sistemas distribuidos, testing
 - IA aplicada al desarrollo: GitHub Copilot, Anthropic Claude, Google Gemini (prompt engineering y refactorización de código)
 
 ## Proyectos destacados
@@ -34,7 +34,7 @@ Plataforma integral para gestión de torneos deportivos y estadísticas de jugad
 
 ### Infraestructura Home Lab & Deployments
 Entorno de servidores locales propio para despliegues 24/7.
-- Orquestación de contenedores con Docker
+- Orquestación de contenedores con Docker y Docker Compose
 - Nginx como proxy inverso
 - Gestión de certificados SSL/TLS y túneles seguros con Cloudflare
 - Administración completa en Linux
