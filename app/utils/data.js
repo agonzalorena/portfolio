@@ -7,6 +7,7 @@ export const stackList = [
   "Next",
   "Tailwind",
   "Git",
+  "AI Tools",
 ];
 
 export const projectList = [

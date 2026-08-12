@@ -80,19 +80,19 @@ const Hero = () => {
           id="title"
           style={{ visibility: "visible" }}
         >
-          Agustin Gonzalorena
+          Agustín Gonzalorena
         </h1>
         <p className="text-2xl text-muted" id="subtitle">
           Software Developer
         </p>
       </div>
-      <div className="hidden lg:flex" id="description">
+      <div className="hidden lg:flex w-10/12" id="description">
         <p className="font-light">
-          Backend Developer specialized in Java and{" "}
-          <span className="text-primary font-semibold">Spring Boot</span>, with
-          experience in frontend projects using React and Next.js. I’m
-          continuously learning and exploring new tools that complement my work
-          as a developer.
+          Software Developer with a{" "}
+          <span className="text-primary font-semibold">backend-oriented</span>{" "}
+          profile and experience across the full-stack. I’m continuously
+          learning and exploring new tools that complement my work as a
+          developer.
         </p>
       </div>
       <div className="hidden lg:flex gap-2" ref={stackContainer}>
