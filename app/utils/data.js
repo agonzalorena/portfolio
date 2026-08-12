@@ -38,6 +38,11 @@ export const connectList = [
     name: "View CV",
     link: "/CV.pdf",
   },
+  {
+    id: 4,
+    name: "Email",
+    link: "mailto:agonzalorena@gmail.com",
+  },
 ];
 
 export const projectsUrl = "https://github.com/agonzalorena?tab=repositories";
