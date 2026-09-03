@@ -51,7 +51,7 @@ export const metadata = {
       "Portfolio of Agustin Gonzalorena. Software developer and enthusiast of all things servers and deployments.",
     url: "https://agonzalorena.com/",
     images: {
-      url: "https://agonzalorena.com/imagen_OpenGraph.png",
+      url: "https://agonzalorena.com/og.png",
       width: 800,
       height: 600,
     },
@@ -90,7 +90,7 @@ const jsonLd = {
   "@type": "Person",
   name: "Agustin Gonzalorena",
   url: "https://agonzalorena.com/",
-  image: "https://agonzalorena.com/imagen_OpenGraph.png",
+  image: "https://agonzalorena.com/og.png",
   jobTitle: "Software Developer",
   description:
     "Software Developer especializado en Java, Spring Boot y arquitecturas de microservicios.",
